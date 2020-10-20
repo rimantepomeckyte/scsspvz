@@ -1,0 +1,32 @@
+$bgclr-lblue: #c2d7ed;
+$bgclr-lgreen:#8bd9b2;
+$txt-clr-pinky:#c781b8;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background-color: $bgclr-lblue;
+    @include flexCenter();
+    h2{
+        color: $txt-clr-pinky;
+    }
+}
+.contact{
+    @include flexCenter();
+    aside{
+        width: 30%;
+        background-color: $bgclr-lgreen;
+        ul{
+            list-style-type: none; 
+        }
+    }
+    form{
+        width: 70%;
+        background-color: $bgclr-lgreen;
+        height: 100%;
+    }
+}
