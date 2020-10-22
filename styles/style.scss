@@ -1,6 +1,12 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 $bgclr-lblue: #c2d7ed;
 $bgclr-lgreen:#8bd9b2;
-$txt-clr-pinky:#c781b8;
+$clr-pinky:#c781b8;
+$font-header:'Sansita Swashed', cursive;
 
 @mixin flexCenter {
     display: flex;
@@ -11,22 +17,43 @@ $txt-clr-pinky:#c781b8;
 .header{
     background-color: $bgclr-lblue;
     @include flexCenter();
+    font-family: $font-header;
+    height: 50px;
     h2{
-        color: $txt-clr-pinky;
+        color: $clr-pinky;
     }
 }
 .contact{
     @include flexCenter();
+    height: 150px;
     aside{
         width: 30%;
         background-color: $bgclr-lgreen;
+        height: 100%;
+        @include flexCenter();
+        border-right: #fff solid 3px;
+
         ul{
             list-style-type: none; 
+            li{
+                padding: 15px;
+                a{
+                    text-decoration: none;
+                }
+            }
+
         }
     }
     form{
         width: 70%;
         background-color: $bgclr-lgreen;
         height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        input{
+            width: 80%;
+        }
     }
 }
